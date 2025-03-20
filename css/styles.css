@@ -520,7 +520,7 @@ img {
   gap: 16px;
 }
 .button-sub-icon {
-  margin-left: ;
+  margin-left: 16;
 }
 
 /*====================================  */
@@ -545,10 +545,14 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background: #fcfcfc;
   width: 408px;
   min-height: 584px;
   padding: 72px 24px 24px 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -566,12 +570,19 @@ img {
   border-radius: 50%;
   background-color: #e7e9fc;
   border: 1px rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:hover {
   background: #404bbf;
   fill: #fff;
 }
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  fill: #fff;
+}
+
 .modal-title {
   max-width: 360px;
   margin-bottom: 16px;
@@ -606,6 +617,7 @@ img {
   padding-left: 38px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
 }
 .review-form-input:focus {
   border-color: #4d5ae5;
@@ -646,6 +658,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .review-form-checkbox-wrapper {
   margin-bottom: 24px;
@@ -659,6 +672,7 @@ img {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
+  fill: transparent;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -666,6 +680,9 @@ img {
 }
 .review-form-checkbox-icon {
   opacity: 0;
+  border: none;
+  background-color: #404bbf;
+  fill: #f4f4fd;
 }
 .review-form-privacy-checkbox:checked
   + .review-form-policy-label
@@ -677,7 +694,6 @@ img {
   + .review-form-policy-label
   .review-form-checkbox-icon {
   opacity: 1;
-  border: none;
 }
 
 .review-form-policy-label {
